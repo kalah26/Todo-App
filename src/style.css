@@ -118,17 +118,18 @@ body {
 }
 
 .todo-list {
+    --spacer: 2rem;
     flex: 1;
     /* background-color: var(--clr-light); */
-    background-color: #92828D;
+    background-color: #eeeedb ;
     color: var(--clr-dark);
-    padding: 1rem;
+    padding: 0rem;
     margin: 0;
 }
 
 .todo-header {
     padding: 2rem;
-    background-color: #eeeedb;
+    background-color: #92828D;
     margin: 0;
     display: flex;
     align-items: center;
@@ -145,9 +146,9 @@ body {
 }
 
 .todo-body {
-    padding: 2rem;
-
-}
+    padding: var(--spacer);
+    position: relative;
+  }
 
 [type="checkbox"] {
     opacity: 0;
@@ -156,13 +157,13 @@ body {
 
 .task {
     position: relative;
+    margin-bottom: 1.25em
 }
 
 .task label {
     display: inline-flex;
     align-items: center;
     position: relative;
-    margin-bottom: 1.25em;
 }
 
 .task::after {
@@ -170,7 +171,7 @@ body {
     position: absolute;
     right: 0;
     left: 0;
-    bottom: -0.5em;
+    bottom: -.5em;
     height: 1px;
     background: currentColor;
     opacity: .1;
@@ -220,3 +221,11 @@ body {
     transform: scaleX(1);
     transform-origin: left;
 }
+
+.delete-stuff {
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+    left: 0;
+    color: var(--clr-dark);
+  }
